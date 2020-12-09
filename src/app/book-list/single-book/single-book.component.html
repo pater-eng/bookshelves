@@ -1,0 +1,25 @@
+ <div class="container">
+    <div class="list-group">
+        <!--[src]: fait le bindung avec le book et la photo-->
+        <!--!isPhotoDabei :  pour le book sans photo, l'image ne sera pas affiché-->
+        <div class="list-group-item list-group-item-action">
+            <img style="max-width: 200px;" *ngIf="book.photo" [src]="book.photo" [disabled]="!isPhotoDabei">
+        </div>
+        <div class="list-group-item list-group-item-action">
+            <h1>{{book.title}}</h1>
+        </div>
+        <div class="list-group-item list-group-item-action">
+            <h2>{{book.author}}</h2>
+        </div>
+        <div class="list-group-item list-group-item-action">
+          <input type="checkbox" style=" margin-left: 50px;">
+        </div>
+    </div>
+    <br>
+    <div>
+        <button class="btn btn-primary" type="button" (click)="onBack()">Retour</button>
+        <button class="btn btn-secondary" type="button" style=" margin-left: 50px;">Ajouté à la Liste des Favories</button>
+    </div>
+    <div>
+    </div>
+</div>
